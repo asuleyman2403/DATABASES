@@ -1,0 +1,27 @@
+CREATE DATABASE lab1;
+CREATE TABLE users (
+  id         SERIAL PRIMARY KEY ,
+  firstname  VARCHAR(50),
+  secondname VARCHAR(50)
+);
+
+ ALTER TABLE users ADD COLUMN isadmin INT;
+ ALTER TABLE users ALTER COLUMN isadmin TYPE boolean USING users.isadmin::boolean;
+ ALTER TABLE users ALTER COLUMN isadmin SET DEFAULT FALSE ;
+ ALTER TABLE users DROP CONSTRAINT users_pkey;
+ ALTER TABLE users ADD PRIMARY KEY (id);
+
+ INSERT INTO users (id,firstname,secondname) VALUES (1,'Assyl','Suleiman');
+ INSERT INTO users (id,firstname,secondname) VALUES (2,'Aseke','Suleiman');
+ SELECT * FROM users;
+
+
+  CREATE TABLE tasks(
+    id SERIAL PRIMARY KEY ,
+    name VARCHAR(50),
+    user_id INT
+  );
+ SELECT * FROM tasks;
+ INSERT INTO tasks (id,name,user_id) VALUES (1,'Assyl', 51525 );
+ DROP TABLE tasks;
+ DROP DATABASE lab1;
