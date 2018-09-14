@@ -17,8 +17,8 @@ update countries set region_id = null ;
 
 insert into countries (country_id, country_name, region_id, population)
 values (default , 'USA', 10, 55500000),
-       (default , 'Japan', 97, 1000000000),
-       (default , 'Korea', 15, 900000000000);
+       (default , 'Argentina', 97, 1000000000),
+       (default , 'Brazilia', 15, 900000000000);
 
 alter table countries
     alter column country_name set default 'Kazakhstan';
