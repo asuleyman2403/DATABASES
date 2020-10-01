@@ -12,7 +12,7 @@ CREATE TABLE users (
  ALTER TABLE users ADD PRIMARY KEY (id);
 
  INSERT INTO users (id,firstname,secondname) VALUES (1,'Assyl','Suleiman');
- INSERT INTO users (id,firstname,secondname) VALUES (2,'Aseke','Suleiman');
+ INSERT INTO users (id,firstname,secondname) VALUES (2,'Aseke','Mussayev');
  SELECT * FROM users;
 
 
